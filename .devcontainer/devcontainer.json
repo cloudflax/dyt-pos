@@ -1,25 +1,26 @@
 // https://aka.ms/devcontainer.json
 {
-	"name": "Existing Docker Compose (Extend)",
-	"dockerComposeFile": [
-		"../docker-compose.yml"
-	],
-	"service": "laravel.test",
-	"workspaceFolder": "/var/www/html",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"bmewburn.vscode-intelephense-client",
-				"onecentlin.laravel-blade",
-				"mohamedbenhida.laravel-intellisense",
-				"shufo.vscode-blade-formatter"
-			],
-			"settings": {}
-		}
-	},
-	"remoteUser": "sail",
-	"postCreateCommand": "chown -R 1000:1000 /var/www/html 2>/dev/null || true"
-	// "forwardPorts": [],
-	// "runServices": [],
-	// "shutdownAction": "none",
+  "name": "Existing Docker Compose (Extend)",
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "laravel.test",
+  "workspaceFolder": "/var/www/html",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "onecentlin.laravel-blade",
+        "mohamedbenhida.laravel-intellisense",
+        "EditorConfig.EditorConfig",
+        "shufo.vscode-blade-formatter"
+      ],
+      "settings": {}
+    }
+  },
+  "remoteUser": "sail",
+  "postCreateCommand": "chown -R 1000:1000 /var/www/html 2>/dev/null || true"
+  // "forwardPorts": [],
+  // "runServices": [],
+  // "shutdownAction": "none",
 }
