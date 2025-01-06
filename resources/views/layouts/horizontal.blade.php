@@ -29,7 +29,11 @@
 
             <!-- start page title -->
             <div class="page-title-box align-self-center d-none d-md-block">
-                <h4 class="page-title mb-0">@yield('page-title')</h4>
+                <h4 class="page-title mb-0">
+                    @if (isset($title))
+                        {{ $title }}
+                    @endif
+                </h4>
             </div>
             <!-- end page title -->
 
