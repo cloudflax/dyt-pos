@@ -1,45 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <title>
+        @if (isset($title))
+            {{ $title }}
+        @endif | {{ config('app.name', 'DYT POS') }}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('build/images/favicon.ico') }}">
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
+    @include('layouts.head-css')
+</head>
 
-        <!-- Styles -->
-        @livewireStyles
-    </head>
-    <body class="font-sans antialiased">
-        <x-banner />
+<body @if ($configs['menus']['isHorizontal']) data-layout="horizontal" @endif>
+    <div id="layout-wrapper">
+        <!-- topbar -->
+        <x-topbar-layout />
 
-        <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
+        <!-- sidebar components -->
+        <x-sidebar-layout />
+        <x-horizontal-layout title="{{ $title ?? '' }}" />
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        <!-- start right content here -->
+        <div class="main-content">
+            <div class="page-content">
+                <div class="container-fluid">
+                    {{ $slot }}
+                </div>
+            </div>
 
-            <!-- Page Content -->
-            <main>
-                {{ $slot }}
-            </main>
+            <!-- footer -->
+            <x-footer-layout />
         </div>
+    </div>
 
-        @stack('modals')
+    @vite(['resources/js/app.js'])
+    @livewireScripts
 
-        @livewireScripts
-    </body>
+    <!-- customizer -->
+    <x-right-sidebar-layout />
+
+    <!-- vendor-scripts -->
+    @include('layouts.vendor-scripts')
+
+</body>
+
 </html>

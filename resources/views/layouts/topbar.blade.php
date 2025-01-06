@@ -1,7 +1,6 @@
 <header id="page-topbar" class="isvertical-topbar">
     <div class="navbar-header">
         <div class="d-flex">
-            <!-- LOGO -->
             <div class="navbar-brand-box">
                 <a href="index" class="logo logo-dark">
                     <span class="logo-sm">
@@ -11,7 +10,6 @@
                         <img src="{{ URL::asset('build/images/logo-dark-sm.png') }}" alt="" height="26">
                     </span>
                 </a>
-
                 <a href="index" class="logo logo-light">
                     <span class="logo-lg">
                         <img src="{{ URL::asset('build/images/logo-light.png') }}" alt="" height="30">
@@ -25,13 +23,9 @@
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
                 <i class="bx bx-menu align-middle"></i>
             </button>
-
-            <!-- start page title -->
             <div class="page-title-box align-self-center d-none d-md-block">
                 <h4 class="page-title mb-0">@yield('page-title')</h4>
             </div>
-            <!-- end page title -->
-
         </div>
 
         <div class="d-flex">
@@ -44,31 +38,26 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
 
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
                         <img src="{{ URL::asset('build/images/flags/us.jpg') }}" alt="user-image" class="me-1"
                             height="12"> <span class="align-middle">English</span>
                     </a>
 
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
                         <img src="{{ URL::asset('build/images/flags/spain.jpg') }}" alt="user-image" class="me-1"
                             height="12"> <span class="align-middle">Spanish</span>
                     </a>
 
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
                         <img src="{{ URL::asset('build/images/flags/germany.jpg') }}" alt="user-image" class="me-1"
                             height="12"> <span class="align-middle">German</span>
                     </a>
 
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
                         <img src="{{ URL::asset('build/images/flags/italy.jpg') }}" alt="user-image" class="me-1"
                             height="12"> <span class="align-middle">Italian</span>
                     </a>
 
-                    <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
                         <img src="{{ URL::asset('build/images/flags/russia.jpg') }}" alt="user-image" class="me-1"
                             height="12"> <span class="align-middle">Russian</span>
