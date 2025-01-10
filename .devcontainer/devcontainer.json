@@ -13,7 +13,8 @@
         "onecentlin.laravel-blade",
         "mohamedbenhida.laravel-intellisense",
         "EditorConfig.EditorConfig",
-        "shufo.vscode-blade-formatter"
+        "shufo.vscode-blade-formatter",
+        "GitHub.copilot"
       ],
       "settings": {}
     }

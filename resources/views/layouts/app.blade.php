@@ -18,7 +18,14 @@
     @include('layouts.head-css')
 </head>
 
-<body @if ($configs['menus']['isHorizontal']) data-layout="horizontal" @endif>
+<body data-layout="{{ $theme['layout'] }}" data-bs-theme="{{ $theme['layout-mode'] }}"
+    data-topbar="{{ $theme['topbar-color'] }}" data-layout-size="{{ $theme['layout-width'] }}"
+    @if ($theme['layout-position'] == 'scrollable') data-layout-scrollable="true" @endif
+    @if ($theme['sidebar-size'] == 'compact') data-sidebar-size="md"
+    @elseif ($theme['sidebar-size'] == 'small') data-sidebar-size="sm" @endif
+    @if ($theme['sidebar-color'] == 'dark') data-sidebar="dark"
+    @elseif ($theme['sidebar-color'] == 'brand') data-sidebar="brand" @endif>
+
     <div id="layout-wrapper">
         <!-- topbar -->
         <x-topbar-layout />
@@ -48,6 +55,8 @@
 
     <!-- vendor-scripts -->
     @include('layouts.vendor-scripts')
+
+    @stack('scripts')
 
 </body>
 
