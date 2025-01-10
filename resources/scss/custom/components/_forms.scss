@@ -37,7 +37,7 @@
 // checkbox
 
 .form-checkbox-outline{
-  
+
   .form-check-input{
     border-width: 2px;
     background-color: var(--#{$prefix}secondary-bg);
@@ -51,7 +51,7 @@
 
       &[type=checkbox]{
         background-image: none;
-        
+
       }
 
       &:after{
@@ -61,7 +61,7 @@
         top: -4px !important;
         left: 1px; /*rtl: -4px */
         font-size: 16px;
-        color: var(--#{$prefix}body-color);  
+        color: var(--#{$prefix}body-color);
       }
     }
   }
@@ -80,19 +80,19 @@
 
     &:checked{
       background-color: $card-bg !important;
-  
+
       &[type=checkbox]{
         background-image: none;
-        
+
       }
-  
+
       &:after{
         position: absolute;
         content: '\F0765';
         font-family: "Material Design Icons";
         top: 6px!important;
         left: 4px;
-        font-size: 6px;    
+        font-size: 6px;
       }
     }
   }
