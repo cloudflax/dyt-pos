@@ -1,13 +1,13 @@
 <!-- Right Sidebar -->
 <a href="#" class="right-bar-toggle layout-setting-btn" id="right-bar-toggle">
-    <i class="bx bx-cog icon-sm font-size-18"></i> <span>Settings</span>
+    <i class="bx bx-cog icon-sm font-size-18"></i> <span>{{ trans_choice('labels.setting', 1) }}</span>
 </a>
 
 <!-- Right Sidebar -->
 <div class="right-bar">
     <div data-simplebar class="h-100">
         <div class="rightbar-title d-flex align-items-center bg-dark p-3">
-            <h5 class="m-0 me-2 text-white">Theme Customizer</h5>
+            <h5 class="m-0 me-2 text-white">{{ __('labels.theme_customizer') }}</h5>
             <a href="javascript:void(0);" class="right-bar-toggle-close ms-auto">
                 <i class="mdi mdi-close noti-icon"></i>
             </a>
@@ -20,115 +20,127 @@
             <form id="layout-settings-form" action="{{ route('theme.customizer') }}" method="POST">
                 @csrf
 
-                <h6 class="mb-3">Layout</h6>
+                <h6 class="mb-3">{{ trans_choice('labels.layout', 0) }}</h6>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout" id="layout-vertical"
                         value="vertical" />
-                    <label class="form-check-label" for="layout-vertical">Vertical</label>
+                    <label class="form-check-label fw-normal" for="layout-vertical">{{ __('labels.vertical') }}</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout" id="layout-horizontal"
                         value="horizontal" />
-                    <label class="form-check-label" for="layout-horizontal">Horizontal</label>
+                    <label class="form-check-label fw-normal"
+                        for="layout-horizontal">{{ __('labels.horizontal') }}</label>
                 </div>
 
-                <h6 class="mt-5 mb-3">Layout Mode</h6>
-                <div class="form-check form-check-inline">
+                <h6 class="mt-4">{{ __('labels.layout_mode') }}</h6>
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-light"
                         value="light" />
-                    <label class="form-check-label" for="layout-mode-light">Light</label>
+                    <label class="form-check-label fw-normal" for="layout-mode-light">{{ __('labels.light') }}</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-dark"
                         value="dark" />
-                    <label class="form-check-label" for="layout-mode-dark">Dark</label>
+                    <label class="form-check-label fw-normal" for="layout-mode-dark">{{ __('labels.dark') }}</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check">
                     <input class="form-check-input" type="radio" name="layout-mode" id="layout-mode-bordered"
                         value="bordered" />
-                    <label class="form-check-label" for="layout-mode-bordered">Bordered</label>
+                    <label class="form-check-label fw-normal"
+                        for="layout-mode-bordered">{{ __('labels.bordered') }}</label>
                 </div>
 
-                <h6 class="mt-5 mb-3">Layout Width</h6>
+                <h6 class="mt-4">{{ __('labels.layout_width') }}</h6>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout-width" id="layout-width-fluid"
                         value="fluid" onchange="document.body.setAttribute('data-layout-size', 'fluid')" />
-                    <label class="form-check-label" for="layout-width-fluid">Fluid</label>
+                    <label class="form-check-label fw-normal" for="layout-width-fluid">{{ __('labels.fluid') }}</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout-width" id="layout-width-boxed"
                         value="boxed" onchange="document.body.setAttribute('data-layout-size', 'boxed')" />
-                    <label class="form-check-label" for="layout-width-boxed">Boxed</label>
+                    <label class="form-check-label fw-normal" for="layout-width-boxed">{{ __('labels.boxed') }}</label>
                 </div>
 
-                <h6 class="mt-5 mb-3">Layout Position</h6>
+                <h6 class="mt-4">{{ __('labels.layout_position') }}</h6>
 
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout-position" id="layout-position-fixed"
                         value="fixed" onchange="document.body.setAttribute('data-layout-scrollable', 'false')" />
-                    <label class="form-check-label" for="layout-position-fixed">Fixed</label>
+                    <label class="form-check-label fw-normal"
+                        for="layout-position-fixed">{{ __('labels.fixed') }}</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="layout-position"
                         id="layout-position-scrollable" value="scrollable"
                         onchange="document.body.setAttribute('data-layout-scrollable', 'true')" />
-                    <label class="form-check-label" for="layout-position-scrollable">Scrollable</label>
+                    <label class="form-check-label fw-normal"
+                        for="layout-position-scrollable">{{ __('labels.scrollable') }}</label>
                 </div>
 
-                <h6 class="mt-5 mb-3">Topbar Type</h6>
+                <h6 class="mt-4">{{ __('labels.topbar_type') }}</h6>
 
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-light"
                         value="light" onchange="document.body.setAttribute('data-topbar', 'light')" />
-                    <label class="form-check-label" for="topbar-color-light">Light</label>
+                    <label class="form-check-label fw-normal"
+                        for="topbar-color-light">{{ __('labels.light') }}</label>
                 </div>
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="topbar-color" id="topbar-color-dark"
                         value="dark" onchange="document.body.setAttribute('data-topbar', 'dark')" />
-                    <label class="form-check-label" for="topbar-color-dark">Dark</label>
+                    <label class="form-check-label fw-normal" for="topbar-color-dark">{{ __('labels.dark') }}</label>
                 </div>
 
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="topbar-color" id="topbar-type-hidden"
                         value="hidden" onchange="document.body.setAttribute('data-topbar', 'hidden')" />
-                    <label class="form-check-label" for="topbar-type-hidden">Hidden</label>
+                    <label class="form-check-label fw-normal"
+                        for="topbar-type-hidden">{{ __('labels.hidden') }}</label>
                 </div>
 
                 <div id="sidebar-setting">
-                    <h6 class="mt-5 mb-3 sidebar-setting">Sidebar Size</h6>
+                    <h6 class="mt-4 sidebar-setting">{{ __('labels.sidebar_size') }}</h6>
 
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-default"
                             value="default" onchange="document.body.setAttribute('data-sidebar-size', 'lg')" />
-                        <label class="form-check-label" for="sidebar-size-default">Default</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-size-default">{{ __('labels.default') }}</label>
                     </div>
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-compact"
                             value="compact" onchange="document.body.setAttribute('data-sidebar-size', 'md')" />
-                        <label class="form-check-label" for="sidebar-size-compact">Compact</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-size-compact">{{ __('labels.compact') }}</label>
                     </div>
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-size" id="sidebar-size-small"
                             value="small" onchange="document.body.setAttribute('data-sidebar-size', 'sm')" />
-                        <label class="form-check-label" for="sidebar-size-small">Small (Icon View)</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-size-small">{{ __('labels.small_icon_view') }}</label>
                     </div>
 
-                    <h6 class="mt-5 mb-3 sidebar-setting">Sidebar Color</h6>
+                    <h6 class="mt-4 sidebar-setting">{{ __('labels.sidebar_color') }}</h6>
 
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-light"
                             value="light" onchange="document.body.setAttribute('data-sidebar', 'light')" />
-                        <label class="form-check-label" for="sidebar-color-light">Light</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-color-light">{{ __('labels.light') }}</label>
                     </div>
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-dark"
                             value="dark" onchange="document.body.setAttribute('data-sidebar', 'dark')" />
-                        <label class="form-check-label" for="sidebar-color-dark">Dark</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-color-dark">{{ __('labels.dark') }}</label>
                     </div>
                     <div class="form-check sidebar-setting">
                         <input class="form-check-input" type="radio" name="sidebar-color" id="sidebar-color-brand"
                             value="brand" onchange="document.body.setAttribute('data-sidebar', 'brand')" />
-                        <label class="form-check-label" for="sidebar-color-brand">Brand</label>
+                        <label class="form-check-label fw-normal"
+                            for="sidebar-color-brand">{{ __('labels.brand') }}</label>
                     </div>
                 </div>
             </form>
