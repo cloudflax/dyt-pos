@@ -1,7 +1,6 @@
 <header class="ishorizontal-topbar">
     <div class="navbar-header">
         <div class="d-flex">
-            <!-- LOGO -->
             <div class="navbar-brand-box">
                 <a href="index" class="logo logo-dark">
                     <span class="logo-sm">
@@ -41,45 +40,7 @@
 
         <div class="d-flex">
 
-            <div class="dropdown d-inline-block language-switch ms-2 ms-xl-3">
-                <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <img class="header-lang-img" src="{{ URL::asset('build/images/flags/us.jpg') }}"
-                        alt="Header Language" height="18">
-                </button>
-                <div class="dropdown-menu dropdown-menu-end">
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                        <img src="{{ URL::asset('build/images/flags/us.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">English</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                        <img src="{{ URL::asset('build/images/flags/spain.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Spanish</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                        <img src="{{ URL::asset('build/images/flags/germany.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">German</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                        <img src="{{ URL::asset('build/images/flags/italy.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Italian</span>
-                    </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                        <img src="{{ URL::asset('build/images/flags/russia.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Russian</span>
-                    </a>
-                </div>
-            </div>
+            <livewire:set-language />
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -91,7 +52,7 @@
                         <div class="search-box">
                             <div class="position-relative">
                                 <input type="text" class="form-control rounded bg-light border-0"
-                                    placeholder="Search...">
+                                    placeholder="{{ __('labels.search') }}...">
                                 <i class="bx bx-search search-icon"></i>
                             </div>
                         </div>
@@ -110,11 +71,11 @@
                     <div class="p-3">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h5 class="m-0 font-size-15"> Notifications </h5>
+                                <h5 class="m-0 font-size-15"> {{ __('labels.notifications') }} </h5>
                             </div>
                             <div class="col-auto">
-                                <a href="#!" class="small fw-semibold text-decoration-underline"> Mark all as
-                                    read</a>
+                                <a href="#!" class="small fw-semibold text-decoration-underline">
+                                    {{ __('labels.mark_all_as_read') }}</a>
                             </div>
                         </div>
                     </div>
@@ -189,7 +150,7 @@
                     </div>
                     <div class="p-2 border-top d-grid">
                         <a class="btn btn-sm btn-link font-size-14 btn-block text-center" href="javascript:void(0)">
-                            <i class="uil-arrow-circle-right me-1"></i> <span>View More..</span>
+                            <i class="uil-arrow-circle-right me-1"></i> <span>{{ __('labels.view_more') }}...</span>
                         </a>
                     </div>
                 </div>
@@ -210,25 +171,25 @@
                     </div>
                     <a class="dropdown-item" href="javascript:void(0);"><i
                             class="mdi mdi-account-circle text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle">Profile</span></a>
+                            class="align-middle">{{ __('labels.profile') }}</span></a>
                     <a class="dropdown-item" href="javascript:void(0);"><i
                             class="mdi mdi-message-text-outline text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle">Messages</span></a>
+                            class="align-middle">{{ __('labels.messages') }}</span></a>
                     <a class="dropdown-item" href="javascript:void(0);"><i
                             class="mdi mdi-lifebuoy text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle">Help</span></a>
+                            class="align-middle">{{ __('labels.help') }}</span></a>
                     <a class="dropdown-item d-flex align-items-center" href="javascript:void(0);"><i
                             class="mdi mdi-cog-outline text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle me-3">Settings</span><span
-                            class="badge bg-success-subtle text-success ms-auto">New</span></a>
+                            class="align-middle me-3">{{ __('labels.settings') }}</span><span
+                            class="badge bg-success-subtle text-success ms-auto">{{ __('labels.new') }}</span></a>
                     <a class="dropdown-item" href="auth-lock-screen"><i
                             class="mdi mdi-lock text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle">Lock screen</span></a>
+                            class="align-middle">{{ __('labels.lock_screen') }}</span></a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="javascript:void();"
                         onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i
                             class="mdi mdi-logout text-muted font-size-16 align-middle me-2"></i> <span
-                            class="align-middle">Logout</span></a>
+                            class="align-middle">{{ __('labels.logout') }}</span></a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>
@@ -247,11 +208,12 @@
                             <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard"
                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-home-alt icon nav-icon"></i>
-                                <span data-key="t-dashboards">Dashboards</span>
+                                <span data-key="t-dashboards">{{ trans_choice('labels.dashboard', 1) }}</span>
                                 <div class="arrow-down"></div>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
-                                <a href="index" class="dropdown-item" data-key="t-ecommerce">Ecommerce</a>
+                                <a href="index" class="dropdown-item"
+                                    data-key="t-ecommerce">{{ __('labels.ecommerce') }}</a>
                             </div>
                         </li>
 
@@ -259,56 +221,44 @@
                             <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more"
                                 role="button">
                                 <i class="bx bx-file icon nav-icon"></i>
-                                <span data-key="t-pages">Pages</span>
+                                <span data-key="t-pages">{{ trans_choice('labels.page', 1) }}</span>
                                 <div class="arrow-down"></div>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="topnav-more">
                                 <div class="dropdown">
                                     <a class="dropdown-item dropdown-toggle arrow-none" href="#"
                                         id="topnav-authentication" role="button">
-                                        <span data-key="t-authentication">Authentication</span>
+                                        <span data-key="t-authentication">{{ __('labels.authentication') }}</span>
                                         <div class="arrow-down"></div>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="topnav-authentication">
-                                        <a href="auth-login" class="dropdown-item" data-key="t-login">Login</a>
+                                        <a href="auth-login" class="dropdown-item"
+                                            data-key="t-login">{{ __('labels.login') }}</a>
                                         <a href="auth-register" class="dropdown-item"
-                                            data-key="t-register">Register</a>
+                                            data-key="t-register">{{ __('labels.register') }}</a>
                                         <a href="auth-recoverpw" class="dropdown-item"
-                                            data-key="t-recover-password">Recover Password</a>
+                                            data-key="t-recover-password">{{ __('labels.recover_password') }}</a>
                                         <a href="auth-lock-screen" class="dropdown-item"
-                                            data-key="t-lock-screen">Lock Screen</a>
-                                        <a href="auth-logout" class="dropdown-item" data-key="t-logout">Logout</a>
-                                        <a href="auth-confirm-mail" class="dropdown-item"
-                                            data-key="t-confirm-mail">Confirm Mail</a>
-                                        <a href="auth-email-verification" class="dropdown-item"
-                                            data-key="t-email-verification">Email Verification</a>
-                                        <a href="auth-two-step-verification" class="dropdown-item"
-                                            data-key="t-two-step-verification">Two Step Verification</a>
+                                            data-key="t-lock-screen">{{ __('labels.lock_screen') }}</a>
+                                        <a href="auth-logout" class="dropdown-item"
+                                            data-key="t-logout">{{ __('labels.logout') }}</a>
                                     </div>
                                 </div>
 
                                 <div class="dropdown">
                                     <a class="dropdown-item dropdown-toggle arrow-none" href="#"
                                         id="topnav-utility" role="button">
-                                        <span data-key="t-utility">Utility</span>
+                                        <span data-key="t-utility">{{ trans_choice('labels.utility', 1) }}</span>
                                         <div class="arrow-down"></div>
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="topnav-utility">
                                         <a href="pages-starter" class="dropdown-item"
-                                            data-key="t-starter-page">Starter Page</a>
+                                            data-key="t-starter-page">{{ __('labels.starter_page') }}</a>
                                         <a href="pages-maintenance" class="dropdown-item"
-                                            data-key="t-maintenance">Maintenance</a>
-                                        <a href="pages-comingsoon" class="dropdown-item"
-                                            data-key="t-coming-soon">Coming Soon</a>
-                                        <a href="pages-404" class="dropdown-item" data-key="t-error-404">Error
-                                            404</a>
-                                        <a href="pages-500" class="dropdown-item" data-key="t-error-500">Error
-                                            500</a>
+                                            data-key="t-maintenance">{{ trans_choice('labels.maintenance', 0) }}</a>
                                     </div>
                                 </div>
 
-                                <a href="layouts-horizontal" class="dropdown-item"
-                                    data-key="t-horizontal">Horizontal</a>
                             </div>
                         </li>
 
