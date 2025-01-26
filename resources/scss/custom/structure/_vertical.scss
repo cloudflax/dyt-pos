@@ -1,10 +1,10 @@
 //
 // _menu.scss
-// 
+//
 
 .metismenu {
     margin: 0;
-    
+
 
     li {
         display: block;
@@ -43,7 +43,7 @@
 
 
 .vertical-menu{
-    width: $sidebar-width;
+    width: $sidebar-width + 10px;
     z-index: 1005;
     background: $sidebar-bg;
     bottom: 0;
@@ -148,7 +148,7 @@
                     font-size: 1.3rem;
                     line-height: 1.40625rem;
                 }
-                
+
 
                 &:hover {
                     color: $sidebar-menu-item-hover-color;
@@ -221,21 +221,21 @@
 
             &.mm-active {
                 color: var(--#{$prefix}sidebar-menu-item-active-color);
-            
+
                 > a {
                     background-color: var(--#{$prefix}sidebar-menu-item-active-bg-color);
                     color: var(--#{$prefix}sidebar-menu-item-active-color);
-            
+
                     .nav-icon {
                         fill: var(--#{$prefix}sidebar-menu-item-active-color) !important;
                     }
                 }
-            
+
                 .mm-show {
                     .mm-active {
                         > a{
                             background: transparent;
-                    
+
                             &:before{
                                 border-color: transparent transparent var(--#{$prefix}sidebar-menu-sub-item-active-color) transparent;
                             }
@@ -371,7 +371,7 @@ body[data-sidebar-size="sm"] {
                         transition: none;
                         display: block;
                         margin: 0 15px;
-                        
+
                         &:hover,
                         &:active,
                         &:focus {
@@ -391,7 +391,7 @@ body[data-sidebar-size="sm"] {
                             padding-left: 25px;
                         }
 
-                        
+
                         &.has-arrow {
                             &:after {
                                 display: none;
@@ -513,7 +513,7 @@ body[data-sidebar-size="sm"] {
 }
 
 body[data-bs-theme="dark"] {
-    
+
     #page-topbar{
         background-color: $topnav-dark-bg;
         box-shadow: none;
@@ -525,20 +525,20 @@ body[data-bs-theme="dark"] {
                 li {
                     a {
                         color: $menu-dark-item-color;
-    
+
                         .nav-icon {
                             fill: $menu-dark-item-color;
                         }
-        
+
                         &:hover {
                             color: $menu-dark-item-active-color;
-    
+
                             .nav-icon {
                                 fill: $menu-dark-item-active-color;
                             }
                         }
                     }
-    
+
                     ul.sub-menu {
                         &:before{
                             background: $sidebar-dark-menu-sub-item-line-color;
@@ -549,53 +549,53 @@ body[data-bs-theme="dark"] {
                                 &:before{
                                     border-color: transparent transparent $sidebar-dark-menu-sub-item-line-color transparent;
                                 }
-    
+
                                 &:hover {
                                     color: $menu-dark-item-active-color;
                                     &:before{
                                         border-color: transparent transparent $menu-dark-item-active-color transparent;
                                     }
                                 }
-    
+
                             }
                         }
                     }
-    
-    
+
+
                     &.mm-active {
                         color: $menu-dark-item-active-color !important;
-                
+
                         >a {
                             background-color: $sidebar-dark-menu-item-active-bg-color;
                             color: $menu-dark-item-active-color !important;
-    
+
                             &::before{
                                 background-color: $menu-dark-item-active-color;
                             }
-    
+
                             .nav-icon {
                                 fill: $menu-dark-item-active-color !important;
                             }
                         }
-    
+
                         .mm-show {
                             .mm-active {
                                 > a{
                                     color: $menu-dark-item-active-color !important;
                                     background: transparent;
-                            
+
                                     &:before{
                                         border-color: transparent transparent $menu-dark-item-active-color transparent;
                                     }
                                 }
                             }
                         }
-    
+
                     }
                 }
             }
         }
-    
+
         .sidebar-footer{
             color: $sidebar-dark-menu-item-color;
             .main-title{
@@ -613,28 +613,28 @@ body[data-bs-theme="dark"] {
                         }
                     }
                 }
-            } 
+            }
         }
-    
+
         // Enlarge menu
         &[data-sidebar-size="sm"] {
-    
+
             // Side menu
             .vertical-menu {
-    
+
                 // Sidebar Menu
                 #sidebar-menu {
-    
+
                     > ul {
                         > li {
-                            
+
                             &:hover {
                                 > a {
                                     .nav-icon{
                                         fill: $menu-dark-item-active-color;
                                     }
                                 }
-    
+
                                 >ul {
                                     a{
                                         color: $menu-dark-item-color;
@@ -645,17 +645,17 @@ body[data-bs-theme="dark"] {
                                 }
                             }
                         }
-    
+
                         ul{
                             background-color:var(--#{$prefix}sidebar-dark-bg);
                         }
-                        
+
                     }
                 }
             }
         }
-    
-    
+
+
         .menu-title {
             color: $sidebar-dark-menu-item-color;
         }
@@ -678,10 +678,10 @@ body[data-sidebar="dark"] {
         }
     }
 
-  
+
 
     #sidebar-menu {
-    
+
         ul {
             li {
                 a {
@@ -690,7 +690,7 @@ body[data-sidebar="dark"] {
                     .nav-icon {
                         fill: $sidebar-dark-menu-item-icon-color;
                     }
-    
+
                     &:hover {
                         color: $sidebar-dark-menu-item-hover-color;
 
@@ -728,7 +728,7 @@ body[data-sidebar="dark"] {
 
                 &.mm-active {
                     color: $sidebar-dark-menu-item-active-color !important;
-            
+
                     >a {
                         background-color: $sidebar-dark-menu-item-active-bg-color;
                         color: $sidebar-dark-menu-item-active-color !important;
@@ -746,7 +746,7 @@ body[data-sidebar="dark"] {
                         .mm-active {
                             > a{
                                 color: $sidebar-dark-menu-item-active-color !important;
-                        
+
                                 &:before{
                                     border-color: transparent transparent $menu-dark-item-active-color transparent;
                                     background-color: transparent!important;
@@ -784,7 +784,7 @@ body[data-sidebar="dark"] {
 
                 > ul {
                     > li {
-                        
+
                         &:hover {
                             > a {
                                 background-color: $sidebar-dark-menu-item-active-bg-color !important;
@@ -808,7 +808,7 @@ body[data-sidebar="dark"] {
                     ul{
                         background-color: $sidebar-dark-bg;
                     }
-                    
+
                 }
             }
 
@@ -836,7 +836,7 @@ body[data-bs-theme="dark"] {
 
                 > ul {
                     > li {
-                        
+
                         &:hover {
                             > a {
                                 background: $sidebar-bg;
@@ -848,7 +848,7 @@ body[data-bs-theme="dark"] {
                     ul{
                         background-color: $sidebar-bg;
                     }
-                    
+
                 }
             }
         }
@@ -891,7 +891,7 @@ body[data-sidebar-size="md"] {
         }
     }
 
-    
+
     .navbar-brand-box{
         width: $sidebar-width-sm;
         @media (max-width: 991.98px){
@@ -910,9 +910,9 @@ body[data-sidebar-size="md"] {
         .vertical-menu-btn{
             display: none;
         }
-        
+
     }
-    
+
     .main-content {
         margin-left: $sidebar-width-sm;
     }
@@ -958,7 +958,7 @@ body[data-sidebar-size="md"] {
             }
         }
 
-        
+
     }
 
     // &[data-sidebar="dark"] {
@@ -1016,43 +1016,43 @@ body[data-sidebar="light"] {
 
     .logo {
         line-height: $header-height;
-    
+
         .logo-sm {
             display: none;
         }
     }
-    
+
     .logo-dark {
         display: $display-block;
     }
-    
+
     .logo-light {
         display: $display-none;
     }
-    
+
     .logo-txt {
         color: $dark !important;
     }
 
     &[data-sidebar-size="sm"] {
-    
+
         .logo {
             span.logo-lg {
                 display: none;
             }
-    
+
             span.logo-sm {
                 display: block;
             }
         }
-    
+
         // Side menu
         .vertical-menu {
-    
-    
+
+
             // Sidebar Menu
             #sidebar-menu {
-    
+
                 > ul {
                     > li {
                         > a {
@@ -1062,21 +1062,21 @@ body[data-sidebar="light"] {
                                 color: $sidebar-menu-item-hover-color;
                             }
                         }
-    
+
                         &:hover {
                             > a {
                                 color: $primary;
                                 background-color: var(--#{$prefix}sidebar-menu-item-active-bg-color);
-    
+
                                 .nav-icon{
                                     color: $primary;
                                 }
                             }
-    
+
                             >ul {
                                 a {
                                     color: $sidebar-menu-sub-item-color;
-    
+
                                     &:hover {
                                         color: $sidebar-menu-item-hover-color;
                                     }
@@ -1084,7 +1084,7 @@ body[data-sidebar="light"] {
                             }
                         }
                     }
-    
+
                     ul {
                         background-color: $sidebar-bg;
                         li.active {
@@ -1095,7 +1095,7 @@ body[data-sidebar="light"] {
                     }
                 }
             }
-    
+
         }
     }
 }
@@ -1122,7 +1122,7 @@ body[data-sidebar="brand"] {
                 }
             }
     }
-    
+
     .navbar-brand-box{
         background-color: $primary;
         .logo-dark{
@@ -1184,7 +1184,7 @@ body[data-sidebar="brand"] {
 
                 &.mm-active {
                     color: $white !important;
-            
+
                     >a {
                         background: rgba($white, 0.2);
                         color: $white !important;
@@ -1202,7 +1202,7 @@ body[data-sidebar="brand"] {
                         .mm-active {
                             > a{
                                 color: $white !important;
-                        
+
                                 &:before{
                                     border-color: transparent transparent $white transparent;
                                     background-color: transparent !important;
@@ -1238,7 +1238,7 @@ body[data-sidebar="brand"] {
     }
 
     &[data-sidebar-size="sm"] {
-        
+
         .vertical-menu {
             #sidebar-menu{
                 >ul{
@@ -1286,7 +1286,7 @@ body[data-sidebar="brand"] {
                 display: none;
             }
         }
-    
+
     }
 
 }

@@ -2,7 +2,7 @@
 
 return [
     "dashboard"            => "{0} Dashboard|[1] Dashboards",
-    "e-commerce"           => "E-commerce",
+    "ecommerce"            => "Ecommerce",
     "page"                 => "{0} Page|[1] Pages",
     "authentication"       => "Authentication",
     "login"                => "Login",

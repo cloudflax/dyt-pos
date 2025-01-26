@@ -213,7 +213,7 @@
                             </a>
                             <div class="dropdown-menu" aria-labelledby="topnav-dashboard">
                                 <a href="index" class="dropdown-item"
-                                    data-key="t-ecommerce">{{ __('labels.e-commerce') }}</a>
+                                    data-key="t-ecommerce">{{ __('labels.ecommerce') }}</a>
                             </div>
                         </li>
 

@@ -2,7 +2,7 @@
 
 return [
     "dashboard"            => "{0} Tablero|[1] Tableros",
-    "e-commerce"           => "Comercio electrónico",
+    "ecommerce"            => "Ecommerce",
     "page"                 => "{0} Página|[1] Páginas",
     "authentication"       => "Autenticación",
     "login"                => "Iniciar sesión",
