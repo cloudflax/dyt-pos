@@ -1,7 +1,9 @@
 <header id="page-topbar" class="isvertical-topbar">
     <div class="navbar-header">
         <div class="d-flex">
+            <!-- Logo section -->
             <div class="navbar-brand-box">
+                <!-- Dark logo -->
                 <a href="index" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{ URL::asset('build/images/logo-dark-sm.png') }}" alt="" height="26">
@@ -10,6 +12,9 @@
                         <img src="{{ URL::asset('build/images/logo-dark-sm.png') }}" alt="" height="26">
                     </span>
                 </a>
+                <!-- End dark logo -->
+
+                <!-- Light logo -->
                 <a href="index" class="logo logo-light">
                     <span class="logo-lg">
                         <img src="{{ URL::asset('build/images/logo-light.png') }}" alt="" height="30">
@@ -18,53 +23,29 @@
                         <img src="{{ URL::asset('build/images/logo-light-sm.png') }}" alt="" height="26">
                     </span>
                 </a>
+                <!-- End light logo -->
             </div>
+            <!-- End logo section -->
 
+            <!-- Menu button -->
             <button type="button" class="btn btn-sm px-3 font-size-24 header-item waves-effect vertical-menu-btn">
                 <i class="bx bx-menu align-middle"></i>
             </button>
+            <!-- End menu button -->
+
+            <!-- Page title -->
             <div class="page-title-box align-self-center d-none d-md-block">
                 <h4 class="page-title mb-0">@yield('page-title')</h4>
             </div>
+            <!-- End page title -->
         </div>
 
         <div class="d-flex">
+            <!-- Language switcher -->
+            <livewire:set-language />
+            <!-- End language switcher -->
 
-            <div class="dropdown d-inline-block language-switch ms-2">
-                <button type="button" class="btn header-item" data-bs-toggle="dropdown" aria-haspopup="true"
-                    aria-expanded="false">
-                    <img class="header-lang-img" src="{{ URL::asset('build/images/flags/us.jpg') }}"
-                        alt="Header Language" height="18">
-                </button>
-                <div class="dropdown-menu dropdown-menu-end">
-
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="eng">
-                        <img src="{{ URL::asset('build/images/flags/us.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">English</span>
-                    </a>
-
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp">
-                        <img src="{{ URL::asset('build/images/flags/spain.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Spanish</span>
-                    </a>
-
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr">
-                        <img src="{{ URL::asset('build/images/flags/germany.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">German</span>
-                    </a>
-
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it">
-                        <img src="{{ URL::asset('build/images/flags/italy.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Italian</span>
-                    </a>
-
-                    <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru">
-                        <img src="{{ URL::asset('build/images/flags/russia.jpg') }}" alt="user-image" class="me-1"
-                            height="12"> <span class="align-middle">Russian</span>
-                    </a>
-                </div>
-            </div>
-
+            <!-- Search dropdown -->
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon" data-bs-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -82,7 +63,9 @@
                     </form>
                 </div>
             </div>
+            <!-- End search dropdown -->
 
+            <!-- Notifications dropdown -->
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item noti-icon" id="page-header-notifications-dropdown-v"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -116,7 +99,6 @@
                                         <p class="mb-0">It will seem like simplified English.</p>
                                     </div>
                                 </div>
-
                             </div>
                         </a>
                         <a href="#!" class="text-reset notification-item">
@@ -175,7 +157,9 @@
                     </div>
                 </div>
             </div>
+            <!-- End notifications dropdown -->
 
+            <!-- User dropdown -->
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item user text-start d-flex align-items-center"
                     id="page-header-user-dropdown-v" data-bs-toggle="dropdown" aria-haspopup="true"
@@ -215,6 +199,8 @@
                     </form>
                 </div>
             </div>
+            <!-- End user dropdown -->
+
         </div>
     </div>
 </header>
