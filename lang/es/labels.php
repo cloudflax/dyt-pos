@@ -53,6 +53,7 @@ return [
     "compact"              => "Compacto",
     "small_icon_view"      => "Pequeño (Vista de iconos)",
     "sidebar_color"        => "Color de la barra lateral",
+    "crafted_by"           => "Elaborado por Cloudflax",
     "routes"               => [
         "login" => [
             "welcome_back"                   => "¡Bienvenido de nuevo!",
