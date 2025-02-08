@@ -205,8 +205,8 @@
                 <div class="collapse navbar-collapse" id="topnav-menu-content">
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-dashboard"
-                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle arrow-none" id="topnav-dashboard" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="bx bx-home-alt icon nav-icon"></i>
                                 <span data-key="t-dashboards">{{ trans_choice('labels.dashboard', 1) }}</span>
                                 <div class="arrow-down"></div>
@@ -218,16 +218,15 @@
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-more"
-                                role="button">
+                            <a class="nav-link dropdown-toggle arrow-none" id="topnav-more" role="button">
                                 <i class="bx bx-file icon nav-icon"></i>
                                 <span data-key="t-pages">{{ trans_choice('labels.page', 1) }}</span>
                                 <div class="arrow-down"></div>
                             </a>
                             <div class="dropdown-menu" aria-labelledby="topnav-more">
                                 <div class="dropdown">
-                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                        id="topnav-authentication" role="button">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" id="topnav-authentication"
+                                        role="button">
                                         <span data-key="t-authentication">{{ __('labels.authentication') }}</span>
                                         <div class="arrow-down"></div>
                                     </a>
@@ -246,8 +245,8 @@
                                 </div>
 
                                 <div class="dropdown">
-                                    <a class="dropdown-item dropdown-toggle arrow-none" href="#"
-                                        id="topnav-utility" role="button">
+                                    <a class="dropdown-item dropdown-toggle arrow-none" id="topnav-utility"
+                                        role="button">
                                         <span data-key="t-utility">{{ trans_choice('labels.utility', 1) }}</span>
                                         <div class="arrow-down"></div>
                                     </a>
