@@ -5,7 +5,7 @@ use App\Http\Controllers\ThemeCustomizer;
 
 # Route for the welcome page
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/login');
 });
 
 # Group of routes that require authentication
